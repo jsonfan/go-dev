@@ -2,6 +2,7 @@ version: '3'
 services:
   web:
     build: .
+    command: gin -p 80
     volumes:
       - .:/go/src/go-dev
     working_dir: /go/src/go-dev

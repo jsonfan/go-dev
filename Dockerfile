@@ -5,9 +5,9 @@ WORKDIR /go/src/go-dev
 
 RUN echo $PATH
 
+RUN curl https://glide.sh/get | sh
+RUN glide update 
 # RUN go build
 RUN go get github.com/codegangsta/gin
-
-CMD gin -p 80
 
 EXPOSE 80
