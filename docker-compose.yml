@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/go/src/go-dev
+    working_dir: /go/src/go-dev
+    ports:
+      - "5001:80"
